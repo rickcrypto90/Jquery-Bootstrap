@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses Page</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+      <a class="navbar-brand" href="#">
+        <img
+          class="img-fluid mr-3"
+          alt="Logo"
+          src="./assets/img/Immagine 200x90.png" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav h-100" id="nav-buttons">
+          <li class="nav-item border-bottom border-primary">
+            <button class="nav-link btn" href="#">Home</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" href="#">Dashboard</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" href="#">My courses</button>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img
+                src="https://placehold.co/60x60"
+                class="rounded-circle"
+                alt="Notifications"
+                width="40"
+                height="40" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img
+                src="https://placehold.co/60x60"
+                alt="User"
+                class="rounded-circle"
+                width="40"
+                height="40" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-caret-down-fill"
+              viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M8 10.586L1.707 4.293a1 1 0 0 1 1.414-1.414L8 8.768l5.879-5.879a1 1 0 0 1 1.414 1.414L8 10.586z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h3>Aitho Learn</h3>
+      <h3>Available courses</h3>
+      <div
+        id="list"
+        class="list-group d-flex flex-column mt-4"
+        style="gap: 1rem"></div>
+    </div>
+
+    <div id="help" class="circle-help">?</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/scripts/courses.js"></script>
+  </body>
+</html>
