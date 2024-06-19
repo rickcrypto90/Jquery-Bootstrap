@@ -9,7 +9,8 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
-  <body>
+
+  <body class="pb-3">
     <nav class="navbar navbar-expand-lg navbar-light border-bottom">
       <a class="navbar-brand" href="#">
         <img
@@ -41,6 +42,14 @@
         </ul>
         <ul class="navbar-nav ml-auto d-flex align-items-center">
           <li class="nav-item">
+            <a class="nav-link" href="#" id="promise"> Promise </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="dark_mode">
+              <img src="./assets/img/sun.svg" alt="sun" />
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">
               <img
                 src="https://placehold.co/60x60"
@@ -50,6 +59,7 @@
                 height="40" />
             </a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#">
               <img
@@ -78,8 +88,8 @@
     </nav>
 
     <div class="container mt-4">
-      <h3>Aitho Learn</h3>
-      <h3>Available courses</h3>
+      <h3 class="text-primary">Aitho Learn</h3>
+      <h3 class="text-primary">Available courses</h3>
       <div
         id="list"
         class="list-group d-flex flex-column mt-4"
@@ -92,5 +102,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./assets/scripts/courses.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#dark_mode").click(function () {
+          $("body").toggleClass("dark-mode");
+
+          if ($("body").hasClass("dark-mode")) {
+            $("#dark_mode").html(
+              `<img src="./assets/img/moon.svg" alt="moon" />`
+            );
+          } else {
+            $("#dark_mode").html(
+              `<img src="./assets/img/sun.svg" alt="sun" />`
+            );
+          }
+        });
+        $("#promise").click(function () {
+          const promise = new Promise((resolve, reject) => {
+            const random = Math.floor(Math.random() * 10);
+            console.log(random);
+            random & 1 ? reject("Error!") : resolve("Success");
+          })
+            .then((value) => {
+              console.log(value);
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        });
+      });
+    </script>
   </body>
 </html>
